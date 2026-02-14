@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-body">
+
+<button class="logout-btn" onclick="logout()" style="position: absolute; top: 8px; right: 8px; background: red; padding: 10px 30px; border: none; border-radius: 5px; color: white; cursor: pointer; font-size: 16px; width: auto; white-space: nowrap;">Logout</button>
+
+<h1>Explore The World</h1>
+<p>Discover amazing destinations</p>
+
+<button id="exploreBtn" style="width: auto; padding: 10px 30px; font-size: 16px;">Explore Destinations</button>
+
+<!-- External JS -->
+<script src="js/home.js"></script>
+<script>
+  function goToLogin() {
+    sessionStorage.setItem("redirectPage", window.location.href);
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<body class="confirm-body">
+
+<div class="confirm-card">
+
+  <div class="check">✓</div>
+
+  <h1>Booking Confirmed!</h1>
+  <p id="thanksMsg"></p>
+
+  <div class="summary">
+    <h3>Booking Summary</h3>
+    <p><b>Destination:</b> <span id="dest"></span></p>
+    <p><b>Travelers:</b> <span id="trav"></span></p>
+    <p><b>Start Date:</b> <span id="date"></span></p>
+    <p><b>Duration:</b> <span id="dur"></span> Days</p>
+    <p><b>Total Paid:</b> <span id="total"></span></p>
+  </div>
+
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("bookingData"));
+const place = JSON.parse(localStorage.getItem("place"));
+
+document.getElementById("thanksMsg").innerText =
+  "Thank you, " + data.name + "! Your trip has been booked.";
+
+document.getElementById("dest").innerText = place.name;
+document.getElementById("trav").innerText = data.people;
+document.getElementById("date").innerText = data.startDate;
+document.getElementById("dur").innerText = data.days;
+document.getElementById("total").innerText = data.total;
+</script>
+<script>
+  function goToLogin() {
+    sessionStorage.setItem("redirectPage", window.location.href);
+    window.location.href = "index.html";
+  }
+</script>
+
+
+</body>

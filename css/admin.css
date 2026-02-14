@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020c22;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #071c3b;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links .active {
+  background: #1f2d4d;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.container {
+  width: 70%;
+  margin: 40px auto;
+}
+
+.card {
+  background: #071c3b;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #1f2d4d;
+  color: white;
+}
+
+.price-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: linear-gradient(to right, orange, darkorange);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.country-box {
+  background: #1f2d4d;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

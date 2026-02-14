@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="details-container">
+<button class="back-btn" onclick="goBack()">← Back to Places</button>
+
+  <div class="details-left">
+    <img id="placeImage">
+  </div>
+
+  <div class="details-right">
+    <h2 id="placeName"></h2>
+    <p id="placeDesc"></p>
+
+    <div class="price-card">
+      <h3>Price Breakdown</h3>
+      <div id="priceBreakdown"></div>
+
+      <h3>Total per Person</h3>
+      <h2 id="totalPrice"></h2>
+    </div>
+    <div class="weather-box">
+  <h3>Current Weather</h3>
+  <p id="weatherInfo">Loading weather...</p>
+</div>
+
+    <button onclick="goBooking()">Book This Trip</button>
+  </div>
+
+</div>
+<script>
+  function goToLogin() {
+    sessionStorage.setItem("redirectPage", window.location.href);
+    window.location.href = "index.html";
+  }
+</script>
+
+
+<script src="js/details.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="booking-body">
+
+<div class="booking-card">
+
+  <h1>Book Your Trip</h1>
+  <p id="placeTitle"></p>
+
+  <form id="bookingForm">
+
+    <label>Your Name</label>
+    <input type="text" id="name" placeholder="Enter your full name" required>
+
+    <label>Contact Number</label>
+    <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="Enter email" required>
+
+    <label>Address</label>
+    <textarea id="address" placeholder="Enter address" required></textarea>
+
+    <label>Start Date</label>
+    <input type="date" id="startDate" required>
+
+    <label>Trip Duration (Days)</label>
+    <input type="number" id="days" min="1" value="1" required>
+
+    <label>Number of Travelers</label>
+    <input type="number" id="people" min="1" value="1" required>
+
+    <div class="cost-box">
+      <p>Cost per person <span id="costPerPerson"></span></p>
+      <p>Number of travelers <span id="travelCount"></span></p>
+      <hr>
+      <h2>Total Cost <span id="totalCost"></span></h2>
+    </div>
+
+    <button type="submit" class="confirm-btn">
+      Confirm Booking
+    </button>
+
+  </form>
+
+</div>
+<!-- Booking Confirmation Popup -->
+<div id="confirmPopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Booking Confirmed!</h2>
+    <p id="popupMessage"></p>
+
+    <div class="popup-summary">
+      <p><strong>Destination:</strong> <span id="popDest"></span></p>
+      <p><strong>Travelers:</strong> <span id="popTrav"></span></p>
+      <p><strong>Start Date:</strong> <span id="popDate"></span></p>
+      <p><strong>Duration:</strong> <span id="popDur"></span> Days</p>
+      <p><strong>Total Paid:</strong> <span id="popTotal"></span></p>
+    </div>
+
+    <button onclick="closePopup()" class="close-btn">
+      Close
+    </button>
+  </div>
+</div>
+
+<script src="js/booking.js"></script>
+</body>
